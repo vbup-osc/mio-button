@@ -2,7 +2,7 @@
 
 Mio Button [http://ookamimio.org](https://ookamimio.org)
 
-![MIO-BTN-CI/CD](https://github.com/VoiceButtonUnitedProject/MioButton/workflows/MIO-BTN-CI/CD/badge.svg)
+![MIO-BTN-CI/CD](https://github.com/MioButton/MioButton/workflows/MIO-BTN-CI/CD/badge.svg)
 
 相关链接/関連URL/Related Links:
 
@@ -34,8 +34,3 @@ Audio: Under [Hololive's Fan Work Guidelines](https://en.hololive.tv/terms).
 
 本项目为爱好者作品，和hololive官方没有关联/このサイトはファン作品であり、公式とは関係ありません/This is a fan-made website and is not related to Hololive/Cover Corp.
 
-## 特别感谢
-
-[![Vercel Logo](https://cdn.jsdelivr.net/gh/paizi/vue-test/vercel.svg)](https://vercel.com)
-
-本项目由 [Vercel](https://vercel.com/) 强力驱动。
