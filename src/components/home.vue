@@ -123,7 +123,7 @@
     transition-property: all;
     transition-duration: 300ms;
     margin-right: 5px;
-    word-warp: break-word !important;
+    word-wrap: break-word !important;
     word-break: break-all !important;
     white-space: normal !important;
 }
@@ -210,7 +210,7 @@
     font-weight: 600;
     transition-property: all;
     transition-duration: 300ms;
-    word-warp: break-word !important;
+    word-wrap: break-word !important;
     word-break: break-all !important;
     white-space: normal !important;
 }
