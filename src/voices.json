@@ -775,6 +775,88 @@
             ]
           },
           {
+              "categoryName": "ark",
+              "categoryDescription": {
+                  "zh-CN": "▌ARK",
+                  "ja-JP": "▌ARK",
+                  "en-US": "▌ARK"
+              },
+              "voiceList": [
+                  {
+                      "name": "mio-221",
+                      "path": "mio-221.mp3",
+                      "description": {
+                          "zh-CN": "对双坚颌龙说教",
+                          "ja-JP": "ペゴマスタクスに説教をする",
+                          "en-US": "NO DATA"
+                      }
+                  },
+                  {
+                      "name": "mio-220",
+                      "path": "mio-220.mp3",
+                      "description": {
+                          "zh-CN": "砍树！砍树！砍~~树！",
+                          "ja-JP": "木こり！木こり！木ーこーりー！",
+                          "en-US": "NO DATA"
+                      }
+                  },
+                  {
+                      "name": "mio-225",
+                      "path": "mio-225.mp3",
+                      "description": {
+                          "zh-CN": "像派对渡渡鸟一样好可爱~！",
+                          "ja-JP": "バーティードードーだってかわいいー！",
+                          "en-US": "NO DATA"
+                      }
+                  },
+                  {
+                      "name": "mio-218",
+                      "path": "mio-218.mp3",
+                      "description": {
+                          "zh-CN": "完成了！mio屋！耶~！",
+                          "ja-JP": "出来ました！ミオハウス！いえ～い！",
+                          "en-US": "NO DATA"
+                      }
+                  },
+                  {
+                      "name": "mio-219",
+                      "path": "mio-219.mp3",
+                      "description": {
+                          "zh-CN": "欸、欸？欸啊啊啊啊啊啊！哈？",
+                          "ja-JP": "え、え？えああああ！！は？",
+                          "en-US": "NO DATA"
+                      }
+                  },
+                  {
+                      "name": "mio-224",
+                      "path": "mio-224.mp3",
+                      "description": {
+                          "zh-CN": "狼vs双坚颌龙",
+                          "ja-JP": "狼vs.ペゴマスタクス",
+                          "en-US": "NO DATA"
+                      }
+                  },
+                  {
+                      "name": "mio-223",
+                      "path": "mio-223.mp3",
+                      "description": {
+                          "zh-CN": "可以请您不要妨碍咱的直播吗？",
+                          "ja-JP": "うちの放送邪魔するのやめてもらっていいですか？",
+                          "en-US": "NO DATA"
+                      }
+                  },
+                  {
+                      "name": "mio-222",
+                      "path": "mio-222.mp3",
+                      "description": {
+                          "zh-CN": "啊-！又是双足飞龙！",
+                          "ja-JP": "はぁー！またワイバーンさん！",
+                          "en-US": "NO DATA"
+                      }
+                  }
+              ]
+          },
+          {
               "categoryName": "missingchild",
               "categoryDescription": {
                 "zh-CN": "▌行方不明",
