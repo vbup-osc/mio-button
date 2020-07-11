@@ -15,15 +15,15 @@
             <div class="title">{{$t("info.title")}}<img src="/resources/bg.png" style="width:40px;height:auto;margin-left:5px;margin-bottom: 3px;"></div>
                 <div class="cate-ctrldft">{{$t("action.live")}}
                     <div v-for="(item) in youtubeData.vtubers" :key="item.ytChannelId"><button class="btn btn-ctrldft" v-if="item.ytChannelId === 'UCp-5t9SrOQwXMU7iIjQfARg'">{{$t('info.subscriber')}}{{item.subscriberCount}}</button></div>
-                    <div v-for="live in live_data" :key="live.startTime">
+                    <div v-for="live in live_data" :key="live.live_schedule">
                         <div v-if="live.title.length">
-                            <span v-if="live.type === 'upcoming'" style="font-size:17px;">{{$t("action.plan")}}{{ format_time(live.startTime) }}</span>
-                            <span v-if="live.type === 'live'" class="warning--text" style="font-size:17px;">{{$t("action.ing")}}</span>
+                            <span v-if="live.status === 'upcoming'" style="font-size:17px;">{{$t("action.plan")}}{{live.live_schedule}}</span>
+                            <span v-if="live.status === 'live'" class="warning--text" style="font-size:17px;">{{$t("action.ing")}}</span>
                             <button class="btn btn-ctrldft"><a 
-                                :href="'https://www.youtube.com/watch?v=' + live.id"
+                                :href="'https://www.youtube.com/watch?v=' + live.yt_video_key"
                                 target="_blank"
                                 style="text-decoration: none;color: #ffffff;"
-                                :class="live.type === 'live' ? 'error--text' : ''"
+                                :class="live.status === 'live' ? 'error--text' : ''"
                             >
                               {{live.title}}
                             </a></button>
@@ -266,20 +266,20 @@ class HomePage extends Vue {
         })
     }
     mounted() {
-        axios.get('https://api.jetri.co/live/1.1')
+        axios.get('https://api.holotools.app/v1/live')
         .then(response => { 
             let fetched = response.data;
             let mio_lives = [];
             const channel_id = 'UCp-5t9SrOQwXMU7iIjQfARg';
             fetched.live.forEach(function(item){
-                if (item.channel === channel_id){
-                    item.type = 'live';
+                if (item.channel.yt_channel_id === channel_id){
+                    item.status = 'live';
                     mio_lives.push(item);
                 }
             });
             fetched.upcoming.forEach(function(item){
-                if (item.channel === channel_id){
-                    item.type = 'upcoming';
+                if (item.channel.yt_channel_id === channel_id){
+                    item.status = 'upcoming';
                     mio_lives.push(item);
                 }
             });
