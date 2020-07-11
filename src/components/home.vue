@@ -17,7 +17,7 @@
                     <div v-for="(item) in youtubeData.vtubers" :key="item.ytChannelId"><button class="btn btn-ctrldft" v-if="item.ytChannelId === 'UCp-5t9SrOQwXMU7iIjQfARg'">{{$t('info.subscriber')}}{{item.subscriberCount}}</button></div>
                     <div v-for="live in live_data" :key="live.live_schedule">
                         <div v-if="live.title.length">
-                            <span v-if="live.status === 'upcoming'" style="font-size:17px;">{{$t("action.plan")}}{{live.live_schedule}}</span>
+                            <span v-if="live.status === 'upcoming'" style="font-size:17px;">{{$t("action.plan")}}{{new Date(live.live_schedule).toLocaleString()}}</span>
                             <span v-if="live.status === 'live'" class="warning--text" style="font-size:17px;">{{$t("action.ing")}}</span>
                             <button class="btn btn-ctrldft"><a 
                                 :href="'https://www.youtube.com/watch?v=' + live.yt_video_key"
