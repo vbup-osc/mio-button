@@ -777,9 +777,9 @@
           {
             "categoryName": "potman",
             "categoryDescription": {
-              "zh-CN": "壶男",
-              "ja-JP": "壺男",
-              "en-US": "NULL"
+              "zh-CN": "▌壶男",
+              "ja-JP": "▌壺男",
+              "en-US": "▌NULL"
             },
             "voiceList": [
               {
