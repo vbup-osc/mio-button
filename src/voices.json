@@ -287,7 +287,7 @@
                     "path": "mio-200.mp3",
                     "description": {
                         "zh-CN": "有什么...恐怖的东西！？恐怖的东西在！可怕的大姐姐、有位可怕的大姐姐！",
-                        "ja-JP": "なんが、怖いのいるの！？怖いのいる！こわいのお姉ちゃん、怖いのいる！",
+                        "ja-JP": "なんか、怖いのいるの！？怖いのいる！こわいのお姉ちゃん、怖いのいる！",
                         "en-US": "There's...something scary!? Something scary! A scary lady!!"
                     }
                 },
@@ -773,6 +773,106 @@
                   }
               }
             ]
+          },    
+          {
+            "categoryName": "potman",
+            "categoryDescription": {
+              "zh-CN": "壶男",
+              "ja-JP": "壺男",
+              "en-US": "NULL"
+            },
+            "voiceList": [
+              {
+                "name": "mio-232",
+                "path": "mio-232.mp3",
+                "description": {
+                  "zh-CN": "已经没救了呢",
+                  "ja-JP": "どうしよもないがある",
+                  "en-US": "NULL"
+                }
+              },
+              {
+                "name": "mio-229",
+                "path": "mio-229.mp3",
+                "description": {
+                  "zh-CN": "是的是的",
+                  "ja-JP": "そそ",
+                  "en-US": "NULL"
+                }
+              },
+              {
+                "name": "mio-230",
+                "path": "mio-230.mp3",
+                "description": {
+                  "zh-CN": "哈哈哈哈哈，啊哈哈哈，啊哈哈哈哈，哈哈",
+                  "ja-JP": "ハハハハハ、アハハハハ、アハハハハハ、ハハ",
+                  "en-US": "NULL"
+                }
+              },
+              {
+                "name": "mio-233",
+                "path": "mio-233.mp3",
+                "description": {
+                  "zh-CN": "不行啊",
+                  "ja-JP": "いけんだ",
+                  "en-US": "NULL"
+                }
+              },
+              {
+                "name": "mio-231",
+                "path": "mio-231.mp3",
+                "description": {
+                  "zh-CN": "没救了呢",
+                  "ja-JP": "どうしよもない",
+                  "en-US": "NULL"
+                }
+              },
+              {
+                "name": "mio-227",
+                "path": "mio-227.mp3",
+                "description": {
+                  "zh-CN": "啊啊啊",
+                  "ja-JP": "ねええ～～～",
+                  "en-US": "NULL"
+                }
+              },
+              {
+                "name": "mio-228",
+                "path": "mio-228.mp3",
+                "description": {
+                  "zh-CN": "搞砸了",
+                  "ja-JP": "やしまた",
+                  "en-US": "NULL"
+                }
+              },
+              {
+                "name": "mio-236",
+                "path": "mio-236.mp3",
+                "description": {
+                  "zh-CN": "不是这样",
+                  "ja-JP": "そうじゃない",
+                  "en-US": "NULL"
+                }
+              },
+              {
+                "name": "mio-234",
+                "path": "mio-234.mp3",
+                "description": {
+                  "zh-CN": "可恶",
+                  "ja-JP": "くそ",
+                  "en-US": "NULL"
+                }
+              },
+              {
+                "name": "mio-235",
+                "path": "mio-235.mp3",
+                "description": {
+                  "zh-CN": "啊，啊啊，啊",
+                  "ja-JP": "あ～、ああ、あ～",
+                  "en-US": "NULL"
+                }
+              }
+            ]
           },
           {
               "categoryName": "ark",
@@ -977,7 +1077,7 @@
                     "path": "mio-212.mp3",
                     "description": {
                         "zh-CN": "有什么在哪里哦!?",
-                        "ja-JP": "なんがいるよ！？！？",
+                        "ja-JP": "なんかいるよ！？！？",
                         "en-US": "Something's there!?!?"
                     }
                   },
@@ -1094,7 +1194,7 @@
                     "path": "mio-196.mp3",
                     "description": {
                         "zh-CN": "但是，总觉得也没有什么需要特别调查的地方，总之拿到护身符了",
-                        "ja-JP": "なんが、でも、特にお調べられる所もなさそう、取り合い御守はゲットしたけど",
+                        "ja-JP": "なんか、でも、特にお調べられる所もなさそう、取り合い御守はゲットしたけど",
                         "en-US": "But...seems like there's nothing special to investigate. Anyway, we already got the amulet."
                     }
                   },
@@ -1103,7 +1203,7 @@
                     "path": "mio-204.mp3",
                     "description": {
                         "zh-CN": "刚才，刚才，刚才，啊！刚才！好像、咱听到那边的门自己开起来的声音了！！",
-                        "ja-JP": "今、今、今、あ！今！なんが、音が聞こえてあそこの扉が自動で切りしまった！",
+                        "ja-JP": "今、今、今、あ！今！なんか、音が聞こえてあそこの扉が自動で切りしまった！",
                         "en-US": "Just now... Just now! I think I heard the door moving by its own!"
                     } 
                 }
@@ -1131,7 +1231,7 @@
                     "path": "mio-161.mp3",
                     "description": {
                         "zh-CN": "好像俊子（咬舌头）转-镜子转-啊！什么东西！？等下！！！",
-                        "ja-JP": "なんがかきふーかがみふーえ、なに！？ちょっと待って！！！",
+                        "ja-JP": "なんかかきふーかがみふーえ、なに！？ちょっと待って！！！",
                         "en-US": "Seems like the mirrar--the mirror is rotating... What's that!? Wait no!!!"
                     }
                 },
@@ -1140,7 +1240,7 @@
                     "path": "mio-166.mp3",
                     "description": {
                         "zh-CN": "哈啊哈啊、昴酱！好像有什么不吓人的-不吓人的东西！好像！好像（在那）！",
-                        "ja-JP": "はぁはぁ、スバちゃん！なんが怖くないー怖くないやつなんが！なんが！",
+                        "ja-JP": "はぁはぁ、スバちゃん！なんか怖くないー怖くないやつなんか！なんか！",
                         "en-US": "Haahaa...Suba-chan! Seems like something not scary...something not scary is over there!"
                     }
                 },
