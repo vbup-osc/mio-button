@@ -779,7 +779,7 @@
             "categoryDescription": {
               "zh-CN": "▌壶男",
               "ja-JP": "▌壺男",
-              "en-US": "▌NULL"
+              "en-US": "▌Getting Over It"
             },
             "voiceList": [
               {
@@ -788,7 +788,7 @@
                 "description": {
                   "zh-CN": "已经没救了呢",
                   "ja-JP": "どうしよもないがある",
-                  "en-US": "NULL"
+                  "en-US": "That can't be helped anymore"
                 }
               },
               {
@@ -797,7 +797,7 @@
                 "description": {
                   "zh-CN": "是的是的",
                   "ja-JP": "そそ",
-                  "en-US": "NULL"
+                  "en-US": "Right, right"
                 }
               },
               {
@@ -806,7 +806,7 @@
                 "description": {
                   "zh-CN": "哈哈哈哈哈，啊哈哈哈，啊哈哈哈哈，哈哈",
                   "ja-JP": "ハハハハハ、アハハハハ、アハハハハハ、ハハ",
-                  "en-US": "NULL"
+                  "en-US": "Hahahahaha, Ahahahaha, Ahahahahaha, haha"
                 }
               },
               {
@@ -815,7 +815,7 @@
                 "description": {
                   "zh-CN": "不行啊",
                   "ja-JP": "いけんだ",
-                  "en-US": "NULL"
+                  "en-US": "No good!"
                 }
               },
               {
@@ -824,7 +824,7 @@
                 "description": {
                   "zh-CN": "没救了呢",
                   "ja-JP": "どうしよもない",
-                  "en-US": "NULL"
+                  "en-US": "That can't be helped"
                 }
               },
               {
@@ -833,7 +833,7 @@
                 "description": {
                   "zh-CN": "啊啊啊",
                   "ja-JP": "ねええ～～～",
-                  "en-US": "NULL"
+                  "en-US": "Neeeeee~"
                 }
               },
               {
@@ -842,7 +842,7 @@
                 "description": {
                   "zh-CN": "搞砸了",
                   "ja-JP": "やしまた",
-                  "en-US": "NULL"
+                  "en-US": "Messed it up!!"
                 }
               },
               {
@@ -851,7 +851,7 @@
                 "description": {
                   "zh-CN": "不是这样",
                   "ja-JP": "そうじゃない",
-                  "en-US": "NULL"
+                  "en-US": "That's wrong!"
                 }
               },
               {
@@ -860,7 +860,7 @@
                 "description": {
                   "zh-CN": "可恶",
                   "ja-JP": "くそ",
-                  "en-US": "NULL"
+                  "en-US": "Damn"
                 }
               },
               {
@@ -869,7 +869,7 @@
                 "description": {
                   "zh-CN": "啊，啊啊，啊",
                   "ja-JP": "あ～、ああ、あ～",
-                  "en-US": "NULL"
+                  "en-US": "Ah~ Ahhhh, Ah~"
                 }
               }
             ]

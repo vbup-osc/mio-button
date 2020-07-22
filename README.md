@@ -27,9 +27,11 @@ This project is modified based on the [Aqua button](https://github.com/zyzsdy/aq
 ## LICENSE
 
 程序部分： MIT
+
 Code: MIT
 
 音频部分: 引用 [Hololive 二次创作条款](https://www.hololive.tv/terms).
+
 Audio: Under [Hololive's Fan Work Guidelines](https://en.hololive.tv/terms).
 
 本项目为爱好者作品，和hololive官方没有关联/このサイトはファン作品であり、公式とは関係ありません/This is a fan-made website and is not related to Hololive/Cover Corp.
