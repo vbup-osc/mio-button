@@ -323,7 +323,7 @@ class HomePage extends Vue {
         if(this.$i18n.locale === 'ja-JP'){
             window.open("https://twitter.com/intent/tweet?text="+"%23ミオボタン %23ミオかわいい 今日、「"+res+"」のランダムオーディオは「"+title+"」です！ より多くのオーディオを聞くには、「ミオボタン」のWebサイトにアクセスしてください~ https://t.co/TLdj8E9Rct");
         }else if(this.$i18n.locale === 'en-US'){
-            window.open("https://twitter.com/intent/tweet?text="+"%23ミオボタン %23ミオかわいい Today，"+res+"'s random audio is "+title+"！ Visit Mio Button Website For More Audio! https://t.co/TLdj8E9Rct");
+            window.open("https://twitter.com/intent/tweet?text="+"%23ミオボタン %23ミオかわいい Today，"+res+"'s random audio is %22"+title+"%22！ Visit Mio Button Website For More Audio! https://t.co/TLdj8E9Rct");
         }else {
             window.open("https://twitter.com/intent/tweet?text="+"%23ミオボタン %23ミオかわいい 今天，“"+res+"”的随机音频是“"+title+"”！ 访问狼按钮网站聆听更多音频 https://t.co/TLdj8E9Rct");
         }
