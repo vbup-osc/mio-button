@@ -39,7 +39,7 @@
                     <button class="btn btn-ctrldft" onclick="window.open('https://vtbbtn.org')">{{$t("action.vtbbtn")}}</button>
                     <button class="btn btn-ctrldft" onclick="window.open('https://sticker.ookamimio.org')">{{$t("action.sticker")}}</button>
                 </div>
-                <div class="cate-ctrldft"><a @click="cate()" style="text-decoration:none;color:#fff;"><img id="imgcate" src="/resources/down.svg" style="width:35px">{{$t("action.choose")}}</a><br>
+                <div class="cate-ctrldft"><a @click="cate()" style="text-decoration:none;color:#fff;"><img id="imgcate" src="/resources/down.svg" style="width:35px;margin-left:-8px;">{{$t("action.choose")}}</a><br>
                     <div id="cate" style="display:none;"><button style="margin-top:7px;margin-bottom:7px;" class="btn btn-ctrldft" v-for="category in voices" v-bind:key="category.categoryName">
                         <a style="text-decoration:none;color:#fff;" :href="$t('#' + category.categoryName)">{{$t("voicecategory." + category.categoryName)}}</a>
                     </button></div>
