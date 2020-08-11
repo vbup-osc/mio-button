@@ -56,28 +56,6 @@
 </template>
 
 <style lang="scss" scoped>
-*{margin: 0;padding: 0px;}
-@-webkit-keyframes slideupin {
-    0% {-webkit-transform: translateY(100%);}
-    100% { -webkit-transform: translateY(0%);}
-}
-@keyframes slideupin {
-    0% {transform: translateY(100%); }
-    100% { transform: translateY(0%);}
-}
-            
-.list{
-    width:100%;height:1000px; background:#ddd; font-size:80px;
-}
-.link{
-    position: fixed;top:0;right: 0px;
-}
-.list:target {
-    -webkit-transform: translateY(0%);
-    transform: translateY(0%);
-    -webkit-animation: slideupin .35s .05s linear forwards;
-    animation: slideupin .35s .05s linear forwards;
-}
 .title{
     text-align: left;
     margin-top: 75px;
