@@ -15,7 +15,7 @@ const ja_JP = {
         random: "● 今日ランダム",
         share: "Twitterで共有して結果を確認",
         placeholder: "すきな呼び方を入力下さい",
-        choose: "● カテゴリーセレクター",
+        choose: " カテゴリーセレクター",
         close: "閉じる",
         live: "● 情報パネル",
         copy: "コピー",

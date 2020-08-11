@@ -13,7 +13,7 @@ const en_US = {
     action: {
         toggleNavbar: "Toggle the Navigation Bar",
         random: "● Today's Random Share",
-        choose: "● Category Selector",
+        choose: " Category Selector",
         share: "Share to Twitter",
         placeholder: "Please enter a name",
         live: "● Info Panel",
