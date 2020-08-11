@@ -39,8 +39,13 @@
                     <button class="btn btn-ctrldft" onclick="window.open('https://vtbbtn.org')">{{$t("action.vtbbtn")}}</button>
                     <button class="btn btn-ctrldft" onclick="window.open('https://sticker.ookamimio.org')">{{$t("action.sticker")}}</button>
                 </div>
+                <div class="cate-ctrldft">{{$t("action.choose")}}<br>
+                    <button style="margin-top:7px;margin-bottom:7px;" class="btn btn-ctrldft" v-for="category in voices" v-bind:key="category.categoryName">
+                        <a style="text-decoration:none;color:#fff;" :href="$t('#' + category.categoryName)">{{$t("voicecategory." + category.categoryName)}}</a>
+                    </button>
+                </div>
             <div v-for="category in voices" v-bind:key="category.categoryName">
-                <div class="cate-header">{{ $t("voicecategory." + category.categoryName) }} 
+                <div class="cate-header" :id="$t(category.categoryName)">{{ $t("voicecategory." + category.categoryName) }} 
                     <div class="cate-body">
                         <button class="btn btn-new" v-for="voiceItem in category.voiceList" v-bind:key="voiceItem.name" @click="play(voiceItem)">{{ $t("voice." + voiceItem.name )}}</button>
                     </div>
@@ -51,6 +56,28 @@
 </template>
 
 <style lang="scss" scoped>
+*{margin: 0;padding: 0px;}
+@-webkit-keyframes slideupin {
+    0% {-webkit-transform: translateY(100%);}
+    100% { -webkit-transform: translateY(0%);}
+}
+@keyframes slideupin {
+    0% {transform: translateY(100%); }
+    100% { transform: translateY(0%);}
+}
+            
+.list{
+    width:100%;height:1000px; background:#ddd; font-size:80px;
+}
+.link{
+    position: fixed;top:0;right: 0px;
+}
+.list:target {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    -webkit-animation: slideupin .35s .05s linear forwards;
+    animation: slideupin .35s .05s linear forwards;
+}
 .title{
     text-align: left;
     margin-top: 75px;

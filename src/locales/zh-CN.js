@@ -13,6 +13,7 @@ const zh_CN = {
     action: {
         toggleNavbar: "切换导航栏",
         random: "● 今日随机",
+        choose: "● 类别选择器",
         share: "分享到Twitter查看",
         placeholder: "请输入昵称",
         live: "● 信息面板",
