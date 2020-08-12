@@ -2,7 +2,7 @@ const en_US = {
     info: {
         title: "Mio Button",
         info: "Info",
-        author: "Mio Button Team 2020",
+        author: "Voice Button United Studio 2020",
         null: "Null",
         subscriber: "Current YouTube Subscribers:",
         audioStaff: "Acknowledgement and Website Info",
@@ -13,6 +13,7 @@ const en_US = {
     action: {
         toggleNavbar: "Toggle the Navigation Bar",
         random: "● Today's Random Share",
+        choose: "Category Selector",
         share: "Share to Twitter",
         placeholder: "Please enter a name",
         live: "● Info Panel",

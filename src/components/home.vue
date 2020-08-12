@@ -39,8 +39,13 @@
                     <button class="btn btn-ctrldft" onclick="window.open('https://vtbbtn.org')">{{$t("action.vtbbtn")}}</button>
                     <button class="btn btn-ctrldft" onclick="window.open('https://sticker.ookamimio.org')">{{$t("action.sticker")}}</button>
                 </div>
+                <div class="cate-ctrldft"><a @click="cate()" style="text-decoration:none;color:#fff;"><img id="imgcate" src="/resources/down.svg" style="width:35px;margin-left:-8px;">{{$t("action.choose")}}</a><br>
+                    <div id="cate" style="display:none;"><button style="margin-top:7px;margin-bottom:7px;" class="btn btn-ctrldft" v-for="category in voices" v-bind:key="category.categoryName">
+                        <a style="text-decoration:none;color:#fff;" :href="$t('#' + category.categoryName)">{{$t("voicecategory." + category.categoryName)}}</a>
+                    </button></div>
+                </div>
             <div v-for="category in voices" v-bind:key="category.categoryName">
-                <div class="cate-header">{{ $t("voicecategory." + category.categoryName) }} 
+                <div class="cate-header" :id="$t(category.categoryName)">{{ $t("voicecategory." + category.categoryName) }} 
                     <div class="cate-body">
                         <button class="btn btn-new" v-for="voiceItem in category.voiceList" v-bind:key="voiceItem.name" @click="play(voiceItem)">{{ $t("voice." + voiceItem.name )}}</button>
                     </div>
@@ -256,6 +261,17 @@ class HomePage extends Vue {
                 img.src = "/resources/menu.svg";
             }
     }
+    cate(){
+        var cate = document.getElementById('cate');
+        var imgcate = document.getElementById('imgcate')
+            if(cate.style.display == "none"){
+                cate.style.display = "";
+                imgcate.src = "/resources/up.svg";
+            }else{
+                cate.style.display = "none";
+                imgcate.src = "/resources/down.svg";
+            }
+    }
     created() { 
         this.youtube()
     }
@@ -323,7 +339,7 @@ class HomePage extends Vue {
         if(this.$i18n.locale === 'ja-JP'){
             window.open("https://twitter.com/intent/tweet?text="+"%23ミオボタン %23ミオかわいい 今日、「"+res+"」のランダムオーディオは「"+title+"」です！ より多くのオーディオを聞くには、「ミオボタン」のWebサイトにアクセスしてください~ https://t.co/TLdj8E9Rct");
         }else if(this.$i18n.locale === 'en-US'){
-            window.open("https://twitter.com/intent/tweet?text="+"%23ミオボタン %23ミオかわいい Today，"+res+"'s random audio is "+title+"！ Visit Mio Button Website For More Audio! https://t.co/TLdj8E9Rct");
+            window.open("https://twitter.com/intent/tweet?text="+"%23ミオボタン %23ミオかわいい Today，"+res+"'s random audio is %22"+title+"%22！ Visit Mio Button Website For More Audio! https://t.co/TLdj8E9Rct");
         }else {
             window.open("https://twitter.com/intent/tweet?text="+"%23ミオボタン %23ミオかわいい 今天，“"+res+"”的随机音频是“"+title+"”！ 访问狼按钮网站聆听更多音频 https://t.co/TLdj8E9Rct");
         }
