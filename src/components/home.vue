@@ -15,6 +15,7 @@
             <div class="title">{{$t("info.title")}}<img src="/resources/bg.png" style="width:40px;height:auto;margin-left:5px;margin-bottom: 3px;"></div>
                 <div class="cate-ctrldft">{{$t("action.live")}}
                     <div v-for="(item) in youtubeData.channels" :key="item.yt_channel_id"><button class="btn btn-ctrldft" v-if="item.yt_channel_id === 'UCp-5t9SrOQwXMU7iIjQfARg'">{{$t('info.subscriber')}}{{item.subscriber_count}}</button></div>
+                    <div><button class="btn btn-ctrldft" onclick="window.open('https://ookamimio.org/resources/voice.rar')">Happy Birthday MIO!</button></div>
                     <div v-for="live in live_data" :key="live.live_schedule">
                         <div v-if="live.title.length">
                             <span v-if="live.status === 'upcoming'" style="font-size:17px;">{{$t("action.plan")}}{{new Date(live.live_schedule).toLocaleString()}}</span>
