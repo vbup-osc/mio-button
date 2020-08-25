@@ -15,7 +15,6 @@
             <div class="title">{{$t("info.title")}}<img src="/resources/bg.png" style="width:40px;height:auto;margin-left:5px;margin-bottom: 3px;"></div>
                 <div class="cate-ctrldft">{{$t("action.live")}}
                     <div v-for="(item) in youtubeData.channels" :key="item.yt_channel_id"><button class="btn btn-ctrldft" v-if="item.yt_channel_id === 'UCp-5t9SrOQwXMU7iIjQfARg'">{{$t('info.subscriber')}}{{item.subscriber_count}}</button></div>
-                    <div><button class="btn btn-ctrldft" onclick="window.open('https://ookamimio.org/resources/voice.rar')">Happy Birthday MIO!</button></div>
                     <div v-for="live in live_data" :key="live.live_schedule">
                         <div v-if="live.title.length">
                             <span v-if="live.status === 'upcoming'" style="font-size:17px;">{{$t("action.plan")}}{{new Date(live.live_schedule).toLocaleString()}}</span>
@@ -39,9 +38,10 @@
                     <button class="btn btn-ctrldft" onclick="window.open('https://www.bilibili.com/read/readlist/rl210208')">{{$t("action.weekly")}}</button>
                     <button class="btn btn-ctrldft" onclick="window.open('https://vtbbtn.org')">{{$t("action.vtbbtn")}}</button>
                     <button class="btn btn-ctrldft" onclick="window.open('https://cute.ookamimio.org')">{{$t("action.sticker")}}</button>
+                    <div><button class="btn btn-ctrldft" onclick="window.open('https://ookamimio.org/resources/voice.rar')">{{$t("action.voicepack")}}</button></div>
                 </div>
                 <div class="cate-ctrldft"><a @click="cate()" style="text-decoration:none;color:#fff;"><img id="imgcate" src="/resources/down.svg" style="width:35px;margin-left:-8px;">{{$t("action.choose")}}</a><br>
-                    <div id="cate" style="display:none;"><button style="margin-top:7px;margin-bottom:7px;" class="btn btn-ctrldft" v-for="category in voices" v-bind:key="category.categoryName">
+                    <div id="cate" style="display:none;"><button style="margin-top:2.5px;margin-bottom:2.5px;" class="btn btn-ctrldft" v-for="category in voices" v-bind:key="category.categoryName">
                         <a style="text-decoration:none;color:#fff;" :href="$t('#' + category.categoryName)">{{$t("voicecategory." + category.categoryName)}}</a>
                     </button></div>
                 </div>
@@ -117,18 +117,18 @@
     background-color:#ff7b7be5
 }
 .btn-ctrldft{/*今日随机按钮*/
-    background-image: linear-gradient(to bottom right,rgb(255, 184, 184),rgb(255, 156, 156)) ;
+    background:rgb(255, 156, 156) ;
     border: 0px; /*边框去除*/
     border-radius: 17px;/*边框圆角*/
     padding-top: 3px;
-    box-shadow: 0 8px 16px 0px rgba(184, 88, 88, 0.26);
+    box-shadow: 5px 5px 10px #d16767, 
+             -5px -5px 10px #ff9494;
     text-align: center;
     font-weight: 600;
     padding-bottom: 3px;
-    margin-left: 5px;
+    margin: 5px;
     transition-property: all;
     transition-duration: 300ms;
-    margin-right: 5px;
     word-wrap: break-word !important;
     word-break: break-all !important;
     white-space: normal !important;
@@ -141,13 +141,14 @@
     box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.397);
 }
 .cate-header{/*分类标题*/
-    background-image: linear-gradient(to bottom right,rgb(78, 78, 78),rgb(58, 58, 58)) ;
-    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.151);
+    background:#4e4e4e;
+    box-shadow: 7px 7px 14px #3a3a3a, 
+               -7px -7px 14px #626262;
     border-radius: 30px;
     text-align: left;
     text-shadow:rgba(0, 0, 0, 0.2) 5px 6px 10px;
     transition-property: all;
-    transition-duration: 300ms;
+    transition-duration: 500ms;
     font-weight: 600;
     color: #fff;
     padding-top: 18px;
@@ -157,7 +158,7 @@
     margin-bottom: 12px;
 }
 .cate-header:hover{
-    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.3);
+    background-image: linear-gradient(to right bottom,#464646, #535353);
 }
 .btn-body-status{/*播放状态分类标题*/
     background-color: #585858d8;
@@ -174,11 +175,12 @@
     font-weight: 600;
 }
 .cate-ctrldft{/*控制中心分类标题*/
-    background-image: linear-gradient(to bottom right,rgb(255, 153, 153),rgb(255, 125, 125));
+    background:#ff7d7d;
     border-radius: 30px;
     text-align: left;
     text-shadow: rgba(184, 88, 88, 0.281) 5px 6px 10px;
-    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.151);
+    box-shadow: 7px 7px 14px #3a3a3a, 
+               -7px -7px 14px #626262;
     color: #fff;
     transition-property: all;
     transition-duration: 300ms;
@@ -188,7 +190,8 @@
     padding-right: 17px;
     font-weight: 600;
     padding-bottom: 14px;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
+    margin-top: 12px;
     max-width: max-content;
 }
 .cate-ctrldft:hover{
@@ -208,8 +211,9 @@
 }
 .btn-new {
     color: #fff;
-    background-image: linear-gradient(to bottom right,rgba(255, 120, 120, 0.836),rgba(255, 71, 71, 0.836));
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background:#ff7c7c;
+    box-shadow:4px 4px 10px #343434, 
+              -4px -4px 10px #686868;
     border-radius: 15px;
     border: 0px;
     max-width: 100%;
@@ -222,7 +226,9 @@
 }
 .btn-new:active,.btn-new:focus{
     color: rgb(255, 204, 204);
-    background-image: linear-gradient(to top left,rgba(255, 120, 120, 0.836),rgba(255, 71, 71, 0.836));
+    box-shadow: inset 5px 5px 10px #3c3c3c, 
+            inset -5px -5px 10px #606060;
+    background:#ff7c7c;      
 }
 .btn-new:hover{
    box-shadow: 0px 0px 5px 5px rgba(252, 120, 120, 0.322);

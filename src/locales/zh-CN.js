@@ -11,6 +11,7 @@ const zh_CN = {
         overlapTips: "叠加播放无法暂停，同时会创建大量线程，建议偶尔刷新页面"
     },
     action: {
+        voicepack:"Window提示音包[大神澪 Ver]",
         toggleNavbar: "切换导航栏",
         random: "● 今日随机",
         choose: "类别选择器",

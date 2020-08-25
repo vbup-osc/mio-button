@@ -45,7 +45,7 @@
         </div>
         <footer class="footer">
             <div class="container-fluid footer-content">
-                <button class="btn-buttom btn-buttom-info"><a href="javascript:location.reload();" style="color: #eeeeee;text-decoration: none">Colorful Wolf 1.4.0</a></button><button class="btn-buttom btn-buttom-info" style="margin-left:5px;"><a href="https://vercel.com?utm_source=oruyanke" style="color: #eeeeee;text-decoration: none"><img src="/resources/vercel.svg" style="height:13px;"></a></button>
+                <button class="btn-buttom btn-buttom-info"><a href="javascript:location.reload();" style="color: #eeeeee;text-decoration: none">Material Wolf 2.0.0</a></button><button class="btn-buttom btn-buttom-info" style="margin-left:5px;"><a href="https://vercel.com?utm_source=oruyanke" style="color: #eeeeee;text-decoration: none"><img src="/resources/vercel.svg" style="height:13px;"></a></button>
                 <div class="pull-left">
                     <div class="text-left" style="color: rgba(255, 166, 102);">{{$t("info.author")}}</div>
                     <div class="text-left">{{$t("info.notOfficial")}}</div>
@@ -61,7 +61,7 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 .main-content{ /*内容部分*/
     min-height: 100vh;
-    background-color: #333333;
+    background-color: #4e4e4e;
 }
 .btn-buttom{
     border: 0px;
@@ -86,7 +86,8 @@
     border-radius: 5px;
 }
 .navbar{ 
-    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.151);
+    box-shadow:  7px 7px 14px #3a3a3a, 
+               -7px -7px 14px #626262;
     background-color: rgba(34, 34, 34, 0.5);/*顶栏部分*/
     margin: 15px;
 }

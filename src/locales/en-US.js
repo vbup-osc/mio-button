@@ -11,6 +11,7 @@ const en_US = {
         overlapTips: "Voice lines cannot be paused and lots of threads will be created when playing in Overlap Mode. Please refresh the page occasionally."
     },
     action: {
+        
         toggleNavbar: "Toggle the Navigation Bar",
         random: "● Today's Random Share",
         choose: "Category Selector",
