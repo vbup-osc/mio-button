@@ -38,7 +38,8 @@
                     <button class="btn btn-ctrldft" onclick="window.open('https://www.bilibili.com/read/readlist/rl210208')">{{$t("action.weekly")}}</button>
                     <button class="btn btn-ctrldft" onclick="window.open('https://vtbbtn.org')">{{$t("action.vtbbtn")}}</button>
                     <button class="btn btn-ctrldft" onclick="window.open('https://cute.ookamimio.org')">{{$t("action.sticker")}}</button>
-                    <div><button class="btn btn-ctrldft" onclick="window.open('https://ookamimio.org/resources/voice.rar')">{{$t("action.voicepack")}}</button></div>
+                    <button class="btn btn-ctrldft" onclick="window.open('https://ookamimio.org/resources/voice.rar')">{{$t("action.voicepack")}}</button>
+                    <button class="btn btn-ctrldft" onclick="window.open('https://ookamimio.org/resources/fubumio.png')">{{$t("action.AvatarFrame")}}</button>
                 </div>
                 <div class="cate-ctrldft"><a @click="cate()" style="text-decoration:none;color:#fff;"><img id="imgcate" src="/resources/down.svg" style="width:35px;margin-left:-8px;">{{$t("action.choose")}}</a><br>
                     <div id="cate" style="display:none;"><button style="margin-top:2.5px;margin-bottom:2.5px;" class="btn btn-ctrldft" v-for="category in voices" v-bind:key="category.categoryName">
