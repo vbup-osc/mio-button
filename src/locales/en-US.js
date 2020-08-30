@@ -13,6 +13,7 @@ const en_US = {
     action: {
         
         toggleNavbar: "Toggle the Navigation Bar",
+        AvatarFrame: "FubuMio Avatar Frame",
         random: "● Today's Random Share",
         choose: "Category Selector",
         share: "Share to Twitter",
