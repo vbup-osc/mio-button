@@ -12,6 +12,7 @@ const zh_CN = {
     },
     action: {
         voicepack:"Window提示音包[大神澪 Ver]",
+        AvatarFrame: "FubuMio 头像框",
         toggleNavbar: "切换导航栏",
         random: "● 今日随机",
         choose: "类别选择器",
