@@ -30,9 +30,9 @@ This project is modified based on the [Aqua button](https://github.com/zyzsdy/aq
 
 ## LICENSE
 
-程序部分： MIT
+程序部分： GPL
 
-Code: MIT
+Code: GPL
 
 <!-- 音频部分: 引用 [Hololive 二次创作条款](https://www.hololive.tv/terms).
 
