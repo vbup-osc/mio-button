@@ -1,6 +1,5 @@
 const zh_CN = {
     info: {
-        title: "狼按钮",
         info: "信息",
         author: "按钮联合工作室 2020",
         null: "空",

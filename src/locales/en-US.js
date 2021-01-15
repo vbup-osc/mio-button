@@ -1,6 +1,5 @@
 const en_US = {
     info: {
-        title: "Mio Button",
         info: "Info",
         author: "Voice Button United Studio 2020",
         null: "Null",
@@ -11,7 +10,6 @@ const en_US = {
         overlapTips: "Voice lines cannot be paused and lots of threads will be created when playing in Overlap Mode. Please refresh the page occasionally."
     },
     action: {
-        
         toggleNavbar: "Toggle the Navigation Bar",
         AvatarFrame: "FubuMio Avatar Frame",
         random: "● Today's Random Share",

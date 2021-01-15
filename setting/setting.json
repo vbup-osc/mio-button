@@ -1,4 +1,9 @@
 {
+  "title": {
+    "CN": "狼按钮",
+    "JP": "ミオボタン",
+    "US": "Mio Button"
+  },
   "footer": {
     "author": [
       {
