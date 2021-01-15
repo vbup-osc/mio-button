@@ -26,6 +26,7 @@
         />
       </div>
     </Select>
+    <Header />
     <div class="container-fluid main-content">
       <router-view></router-view>
     </div>
@@ -33,15 +34,37 @@
   </div>
 </template>
 
+
+<script>
+import Select from './components/Select'
+import Header from './view/Header'
+import Footer from './view/Footer'
+
+export default {
+  components: {
+    Select,
+    Header,
+    Footer
+  },
+  methods: {
+    changeLang(v) {
+      this.$i18n.locale = v
+      localStorage.setItem('lang', v)
+      this.$refs.Select.showItem()
+    }
+  },
+  created() {
+    console.log('Produced by Voice Button United Studio')
+    this.$i18n.locale = localStorage.getItem('lang') || this.$i18n.locale
+  }
+}
+</script>
+
 <style lang="scss">
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
-
-.select {
-  position: fixed;
-  right: 15px;
-  top: 15px;
+body {
+  background: rgb(78, 78, 78);
 }
-
 .main-content {
   /*内容部分*/
   min-height: 100vh;
@@ -170,35 +193,3 @@
   text-align: right;
 }
 </style>
-
-<script>
-import Vue from 'vue'
-import Component from 'vue-class-component'
-import Select from './components/Select'
-import Footer from './view/Footer'
-
-@Component({
-  components: {
-    Select,
-    Footer
-  }
-})
-class App extends Vue {
-  get currentLang() {
-    return this.$i18n.locale;
-  }
-  created() {
-    // eslint-disable-next-line 
-    console.log("Produced by Voice Button United Studio");
-    this.$i18n.locale = localStorage.getItem("lang") || this.$i18n.locale;
-  }
-  changeLang(v) {
-    this.$i18n.locale = v
-    localStorage.setItem("lang", v)
-    this.$refs.Select.showItem()
-  }
-}
-
-export default App;
-</script>
-
