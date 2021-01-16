@@ -16,5 +16,6 @@
       "<a href=\"https://github.com/voosc/mio-button\">请在GitHub提出您的宝贵意见</a>"
     ]
   },
-    "CDN": "https://cdn.jsdelivr.net/gh/vbup-osc/mio-button@master/public/voices"
+  "CDN": "https://cdn.jsdelivr.net/gh/vbup-osc/mio-button@master/public/voices",
+  "GA_ID": "UA-166854572-1"
 }

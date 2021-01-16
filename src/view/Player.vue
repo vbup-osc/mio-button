@@ -3,7 +3,11 @@
     <div v-if="playSetting.nowPlay.name" class="status">
       {{ $t("action.playing") + $t("voice." + playSetting.nowPlay.name) }}
     </div>
-    <div v-for="category in voices" :key="category.categoryName" :id="category.categoryName">
+    <div
+      v-for="category in voices"
+      :key="category.categoryName"
+      :id="category.categoryName"
+    >
       <Card class="category" :dark="true">
         <template #header>
           {{ $t("voicecategory." + category.categoryName) }}
@@ -13,7 +17,7 @@
           :voice="true"
           :key="voiceItem.name"
           :value="$t('voice.' + voiceItem.name)"
-          @click.native="play(voiceItem)"
+          @click.native="play(voiceItem, category.categoryName)"
         />
       </Card>
     </div>
@@ -43,8 +47,10 @@ import Card from '../components/common/Card'
 import Button from '../components/common/Button'
 import Control from '../components/Control'
 import Setting from '@/../setting/setting.json'
+import { gtag } from '@/assets/script/analytics/gtag'
 
 const CDN = Setting['CDN']
+const GA_ID = Setting['GA_ID']
 
 export default {
   components: {
@@ -64,8 +70,15 @@ export default {
     }
   },
   methods: {
-    play(voice) {
+    play(voice, category) {
       // GA的事件上报位置
+      if (process.env.NODE_ENV === 'production' && GA_ID) {
+        gtag('event', '播放语音', {
+          event_category: category,
+          event_label: voice.name,
+          value: 1
+        })
+      }
       if (!this.playSetting.overlap) {
         if (this.playerList.has('once')) {
           this.playerList.get('once').audio.pause()
