@@ -47,10 +47,13 @@ export default {
     width: 55px;
     height: 40px;
     margin: 0 0 0 5px;
-    background: rgba(255, 123, 123, 0.76);
+    background: $control-color;
     color: #fff;
     border-radius: 30px;
     cursor: pointer;
+    &:hover {
+      background-color: $control-hover-color;
+    }
     img {
       width: 30px;
     }
@@ -69,14 +72,14 @@ export default {
       justify-content: center;
       width: 36px;
       height: 36px;
-      background: rgba(255, 123, 123, 0.76);
+      background: $control-color;
       border-radius: 50%;
       margin: auto 5px;
       flex-shrink: 0;
       box-shadow: 1px 1px 5px #343434;
       cursor: pointer;
       &:hover {
-        background-color: rgba(255, 123, 123, 0.9);
+        background-color: $control-hover-color;
       }
     }
   }

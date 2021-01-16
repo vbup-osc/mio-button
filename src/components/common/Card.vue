@@ -39,14 +39,14 @@ export default {
 }
 
 .default {
-  background: rgb(255, 125, 125);
+  background: $card-color;
   &:hover {
     box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.3);
   }
 }
 
 .dark {
-  background: rgb(78, 78, 78);
+  background: $dark-card-color;
   &:hover {
     background-image: linear-gradient(to right bottom, #464646, #535353);
   }

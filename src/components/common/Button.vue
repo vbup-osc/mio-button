@@ -50,7 +50,7 @@ a {
 }
 
 .btn {
-  background: #ff9c9c;
+  background: $btn-color;
   box-shadow: 5px 5px 10px #d16767, -5px -5px 10px #ff9494;
   &:hover {
     box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.397);
@@ -61,7 +61,7 @@ a {
 }
 
 .voice-btn {
-  background: #ff7c7c;
+  background: $voice-btn-color;
   box-shadow: 4px 4px 10px #343434, -4px -4px 10px #686868;
   &:hover {
     box-shadow: 0 0 5px 5px rgba(252, 120, 120, 0.322);
