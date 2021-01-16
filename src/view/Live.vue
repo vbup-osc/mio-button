@@ -75,7 +75,6 @@ export default {
 
 <style lang="scss" scoped>
 .live-wrapper {
-  margin-left: 30px;
   .live {
     display: flex;
     align-items: center;

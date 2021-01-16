@@ -17,9 +17,9 @@ export default {
 .header {
   display: flex;
   align-items: center;
-  height: 100px;
-  padding: 10px 0 30px 30px;
-  margin-top: 75px;
+  height: 60px;
+  padding: 10px 30px 20px 30px;
+  margin-top: 70px;
   .title {
     display: inline-block;
     font-size: 35px;
