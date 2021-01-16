@@ -36,7 +36,6 @@
   </div>
 </template>
 
-
 <script>
 import Select from './components/Select'
 import Header from './view/Header'

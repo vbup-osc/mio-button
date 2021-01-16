@@ -62,7 +62,7 @@ export default {
           this.YoutubeData = res.data.subscriber_count
         }
       })
-    axios.get(`https://api.holotools.app/v1/live?channel_id=11`)
+    axios.get('https://api.holotools.app/v1/live?channel_id=11')
       .then(res => {
         if (res.data) {
           this.LiveList = res.data.live || []

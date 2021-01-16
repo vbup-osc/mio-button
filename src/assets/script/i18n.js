@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 
-import zh_CN from '@/../setting/locales/zh-CN'
-import ja_JP from '@/../setting/locales/ja-JP'
-import en_US from '@/../setting/locales/en-US'
+import CN from '@/../setting/locales/zh-CN'
+import JP from '@/../setting/locales/ja-JP'
+import US from '@/../setting/locales/en-US'
 import VoiceList from '@/../setting/voices.json'
 import Setting from '@/../setting/setting.json'
 
@@ -11,55 +11,55 @@ Vue.use(VueI18n)
 
 const TITLE = Setting.title
 
-//提取标签到语言文件
-let addZh_CN = { voice: {}, voicecategory: {} };
-let addja_JP = { voice: {}, voicecategory: {} };
-let adden_US = { voice: {}, voicecategory: {} };
+// 提取标签到语言文件
+const CN_VOICE = { voice: {}, voicecategory: {} }
+const JP_VOICE = { voice: {}, voicecategory: {} }
+const US_VOICE = { voice: {}, voicecategory: {} }
 
-for (let voiceCategoryList of VoiceList.voices) {
+for (const voiceCategoryList of VoiceList.voices) {
   if (voiceCategoryList.categoryDescription !== undefined) {
     if (voiceCategoryList.categoryDescription['zh-CN'] !== undefined) {
-      addZh_CN.voicecategory[voiceCategoryList.categoryName] = voiceCategoryList.categoryDescription['zh-CN'];
+      CN_VOICE.voicecategory[voiceCategoryList.categoryName] = voiceCategoryList.categoryDescription['zh-CN']
     }
     if (voiceCategoryList.categoryDescription['ja-JP'] !== undefined) {
-      addja_JP.voicecategory[voiceCategoryList.categoryName] = voiceCategoryList.categoryDescription['ja-JP'];
+      JP_VOICE.voicecategory[voiceCategoryList.categoryName] = voiceCategoryList.categoryDescription['ja-JP']
     }
     if (voiceCategoryList.categoryDescription['en-US'] !== undefined) {
-      adden_US.voicecategory[voiceCategoryList.categoryName] = voiceCategoryList.categoryDescription['en-US'];
+      US_VOICE.voicecategory[voiceCategoryList.categoryName] = voiceCategoryList.categoryDescription['en-US']
     }
   }
-  for (let voiceItem of voiceCategoryList.voiceList) {
+  for (const voiceItem of voiceCategoryList.voiceList) {
     if (voiceItem.description !== undefined) {
       if (voiceItem.description['zh-CN'] !== undefined) {
-        addZh_CN.voice[voiceItem.name] = voiceItem.description['zh-CN'];
+        CN_VOICE.voice[voiceItem.name] = voiceItem.description['zh-CN']
       }
       if (voiceItem.description['ja-JP'] !== undefined) {
-        addja_JP.voice[voiceItem.name] = voiceItem.description['ja-JP'];
+        JP_VOICE.voice[voiceItem.name] = voiceItem.description['ja-JP']
       }
       if (voiceItem.description['en-US'] !== undefined) {
-        adden_US.voice[voiceItem.name] = voiceItem.description['en-US'];
+        US_VOICE.voice[voiceItem.name] = voiceItem.description['en-US']
       }
     }
   }
 }
 
-let emzh_CN = Object.assign(zh_CN, addZh_CN);
-let emja_JP = Object.assign(ja_JP, addja_JP);
-let emen_US = Object.assign(en_US, adden_US);
+const CN_LIST = Object.assign(CN, CN_VOICE)
+const JP_LIST = Object.assign(JP, JP_VOICE)
+const US_LIST = Object.assign(US, US_VOICE)
 
-emzh_CN.info.title = TITLE.CN || '语音按钮'
-emja_JP.info.title = TITLE.JP || '语音按钮'
-emen_US.info.title = TITLE.US || '语音按钮'
+CN_LIST.info.title = TITLE.CN || '语音按钮'
+JP_LIST.info.title = TITLE.JP || '语音按钮'
+US_LIST.info.title = TITLE.US || '语音按钮'
 
 const messages = {
-  'zh-CN': emzh_CN,
-  'ja-JP': emja_JP,
-  'en-US': emen_US
+  'zh-CN': CN_LIST,
+  'ja-JP': JP_LIST,
+  'en-US': US_LIST
 }
 
-let locale = 'zh-CN';
+let locale = 'zh-CN'
 if (/ja/i.test(navigator.language)) {
-  locale = 'ja-JP';
+  locale = 'ja-JP'
 } else if (/en/i.test(navigator.language)) {
   locale = 'en-US'
 }

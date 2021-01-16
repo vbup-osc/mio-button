@@ -17,7 +17,7 @@ export default {
   methods: {
     showItem() {
       if (!this.isShowItem) {
-        this.$refs.Select.style.height = 20 + (this.$refs.Select.children.length * 38) + 'px'
+        this.$refs.Select.style.height = 20 + (this.$refs.Select.children.length * 40) + 'px'
         this.$refs.Select.children[0].style['border-bottom-color'] = '#666'
       } else {
         this.$refs.Select.style.height = '48px'

@@ -2,7 +2,7 @@
   <Card>
     <template #header>
       <div class="title" @click="changeShow">
-        <img src="/resources/down.svg" :style="{'transform': isShow ? 'rotateX(180deg)' : ''}" />
+        <img src="@/assets/images/down.svg" :style="{'transform': isShow ? 'rotateX(180deg)' : ''}" />
         <div>
           {{ $t("action.choose") }}
         </div>

@@ -33,14 +33,14 @@ export default {
   },
   methods: {
     randomshare() {
-      const tempList = this.voices[this._getrRandomInt(this.voices.length - 1)];
+      const tempList = this.voices[this._getrRandomInt(this.voices.length - 1)]
       const title = this.$t('voice.' + tempList.voiceList[this._getrRandomInt(tempList.voiceList.length - 1)].name)
       if (this.$i18n.locale === 'ja-JP') {
-        window.open("https://twitter.com/intent/tweet?text=" + "%23ミオボタン %23ミオかわいい 今日、「" + this.value + "」のランダムオーディオは「" + title + "」です！ より多くのオーディオを聞くには、「ミオボタン」のWebサイトにアクセスしてください~ https://t.co/TLdj8E9Rct")
+        window.open('https://twitter.com/intent/tweet?text=' + '%23ミオボタン %23ミオかわいい 今日、「' + this.value + '」のランダムオーディオは「' + title + '」です！ より多くのオーディオを聞くには、「ミオボタン」のWebサイトにアクセスしてください~ https://t.co/TLdj8E9Rct')
       } else if (this.$i18n.locale === 'en-US') {
-        window.open("https://twitter.com/intent/tweet?text=" + "%23ミオボタン %23ミオかわいい Today，" + this.value + "'s random audio is %22" + title + "%22！ Visit Mio Button Website For More Audio! https://t.co/TLdj8E9Rct")
+        window.open('https://twitter.com/intent/tweet?text=' + '%23ミオボタン %23ミオかわいい Today，' + this.value + '\'s random audio is %22' + title + '%22！ Visit Mio Button Website For More Audio! https://t.co/TLdj8E9Rct')
       } else {
-        window.open("https://twitter.com/intent/tweet?text=" + "%23ミオボタン %23ミオかわいい 今天，“" + this.value + "”的随机音频是“" + title + "”！ 访问狼按钮网站聆听更多音频 https://t.co/TLdj8E9Rct")
+        window.open('https://twitter.com/intent/tweet?text=' + '%23ミオボタン %23ミオかわいい 今天，“' + this.value + '”的随机音频是“' + title + '”！ 访问狼按钮网站聆听更多音频 https://t.co/TLdj8E9Rct')
       }
     },
     _getrRandomInt(max) {

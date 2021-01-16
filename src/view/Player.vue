@@ -117,8 +117,8 @@ export default {
       }
     },
     randomPlay() {
-      let tempList = this.voices[this._getrRandomInt(this.voices.length - 1)];
-      this.play(tempList.voiceList[this._getrRandomInt(tempList.voiceList.length - 1)]);
+      const tempList = this.voices[this._getrRandomInt(this.voices.length - 1)]
+      this.play(tempList.voiceList[this._getrRandomInt(tempList.voiceList.length - 1)])
     },
     stopPlay() {
       for (const key of this.playerList.keys()) {
