@@ -27,6 +27,7 @@
       </div>
     </Select>
     <Header />
+    <Live />
     <div class="container-fluid main-content">
       <router-view></router-view>
     </div>
@@ -39,10 +40,12 @@
 import Select from './components/Select'
 import Header from './view/Header'
 import Footer from './view/Footer'
+import Live from './view/Live'
 
 export default {
   components: {
     Select,
+    Live,
     Header,
     Footer
   },
@@ -54,6 +57,7 @@ export default {
     }
   },
   created() {
+    console.log(this.$i18n)
     console.log('Produced by Voice Button United Studio')
     this.$i18n.locale = localStorage.getItem('lang') || this.$i18n.locale
   }

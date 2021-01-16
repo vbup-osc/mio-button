@@ -1,47 +1,37 @@
 <template>
-  <Card>
+  <Card class="live-wrapper">
     <template #header>
       {{ $t("action.live") }}
     </template>
-    <div>{{ $t("info.subscriber") }}{{ YoutubeData }}</div>
+    <Button v-if="YoutubeData" :value="$t('info.subscriber') + YoutubeData" />
     <div v-if="LiveList.length > 0">
       <template v-for="item in LiveList">
         <div class="live" :key="item.id">
-          <a
-            :href="
-              item.channel.yt_channel_id
-                ? 'https://www.youtube.com/channel/' +
-                  item.channel.yt_channel_id
-                : 'https://live.bilibili.com/' + item.channel.bb_space_id
+          <div class="live-time">
+            {{ new Date(item.live_schedule).toLocaleString() }}
+          </div>
+          <Button
+            :value="item.title"
+            :url="
+              'https://www.youtube.com/channel/' + item.channel.yt_channel_id
             "
-            class="live-title"
-            target="_blank"
-          >
-            {{ item.title }}
-          </a>
+          />
         </div>
       </template>
     </div>
-    <div class="upcoming-content" v-if="UpcomingList.length > 0">
+    <div v-if="UpcomingList.length > 0">
       <template v-for="item in UpcomingList">
-        <div class="upcoming" :key="item.id">
-          <div style="width: 100%">
-            <div class="upcoming-time">
-              {{ new Date(item.live_schedule).toLocaleString() }}
-            </div>
-            <a
-              :href="
-                item.channel.yt_channel_id
-                  ? 'https://www.youtube.com/channel/' +
-                    item.channel.yt_channel_id
-                  : 'https://live.bilibili.com/' + item.channel.bb_space_id
-              "
-              class="upcoming-title"
-              target="_blank"
-            >
-              {{ item.title }}
-            </a>
+        <div class="live" :key="item.id">
+          <div class="live-time">
+            {{ $t("action.plan") }}
+            {{ new Date(item.live_schedule).toLocaleString() }}
           </div>
+          <Button
+            :value="item.title"
+            :url="
+              'https://www.youtube.com/channel/' + item.channel.yt_channel_id
+            "
+          />
         </div>
       </template>
     </div>
@@ -50,11 +40,13 @@
 
 <script>
 import Card from '@/components/common/Card'
+import Button from '@/components/common/Button'
 import axios from 'axios'
 
 export default {
   components: {
-    Card
+    Card,
+    Button
   },
   data() {
     return {
@@ -82,4 +74,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.live-wrapper {
+  margin-left: 30px;
+  .live {
+    display: flex;
+    align-items: center;
+    .live-time {
+      font-size: 17px;
+      font-weight: 600;
+    }
+  }
+}
 </style>

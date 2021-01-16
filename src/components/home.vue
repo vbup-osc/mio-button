@@ -66,41 +66,6 @@
         </button>
       </div>
       <div class="cate-ctrldft">
-        {{ $t("action.live") }}
-        <div v-for="item in youtubeData.channels" :key="item.yt_channel_id">
-          <button
-            class="btn btn-ctrldft"
-            v-if="item.yt_channel_id === 'UCp-5t9SrOQwXMU7iIjQfARg'"
-          >
-            {{ $t("info.subscriber") }}{{ item.subscriber_count }}
-          </button>
-        </div>
-        <div v-for="live in live_data" :key="live.live_schedule">
-          <div v-if="live.title.length">
-            <span v-if="live.status === 'upcoming'" style="font-size: 17px"
-              >{{ $t("action.plan")
-              }}{{ new Date(live.live_schedule).toLocaleString() }}</span
-            >
-            <span
-              v-if="live.status === 'live'"
-              class="warning--text"
-              style="font-size: 17px"
-              >{{ $t("action.ing") }}</span
-            >
-            <button class="btn btn-ctrldft">
-              <a
-                :href="'https://www.youtube.com/watch?v=' + live.yt_video_key"
-                target="_blank"
-                style="text-decoration: none; color: #ffffff"
-                :class="live.status === 'live' ? 'error--text' : ''"
-              >
-                {{ live.title }}
-              </a>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="cate-ctrldft">
         {{ $t("action.random") }}
         <input
           id="share"
@@ -165,14 +130,14 @@
           >
             <a
               style="text-decoration: none; color: #fff"
-              :href="$t('#' + category.categoryName)"
+              :href="'#' + category.categoryName"
               >{{ $t("voicecategory." + category.categoryName) }}</a
             >
           </button>
         </div>
       </div>
       <div v-for="category in voices" v-bind:key="category.categoryName">
-        <div class="cate-header" :id="$t(category.categoryName)">
+        <div class="cate-header" :id="category.categoryName">
           {{ $t("voicecategory." + category.categoryName) }}
           <div class="cate-body">
             <button

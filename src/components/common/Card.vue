@@ -12,7 +12,7 @@
 <style lang="scss" scoped>
 .card-wrapper {
   max-width: max-content;
-  margin: 12px 5px;
+  margin: 10px 5px;
   padding: 14px 17px;
   border-radius: 30px;
   overflow: hidden;
