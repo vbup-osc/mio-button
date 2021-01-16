@@ -38,6 +38,9 @@ export default {
 
 <style lang="scss" scoped>
 .select-wrapper {
+  position: fixed;
+  right: 15px;
+  top: 15px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
