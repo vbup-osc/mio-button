@@ -1,5 +1,5 @@
 <template>
-  <div class="card-wrapper">
+  <div class="card-wrapper" :class="dark ? 'dark' : 'default'">
     <div class="card-header" v-if="$slots.header">
       <slot name="header"></slot>
     </div>
@@ -9,21 +9,27 @@
   </div>
 </template>
 
+<script>
+export default {
+  props: {
+    dark: {
+      type: Boolean,
+      default: false
+    }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 .card-wrapper {
   max-width: max-content;
-  margin: 10px 5px;
-  padding: 14px 17px;
+  margin: 15px 30px;
+  padding: 12px 17px;
   border-radius: 30px;
   overflow: hidden;
   transition: box-shadow 0.25s;
   box-shadow: 7px 7px 14px #3a3a3a, -7px -7px 14px #626262;
   color: #fff;
-  background: rgb(255, 125, 125);
-
-  &:hover {
-    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.3);
-  }
 
   .card-header {
     font-size: 20px;
@@ -32,6 +38,20 @@
 
   .card-text {
     padding: 5px 0;
+  }
+}
+
+.default {
+  background: rgb(255, 125, 125);
+  &:hover {
+    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.dark {
+  background: rgb(78, 78, 78);
+  &:hover {
+    background-image: linear-gradient(to right bottom, #464646, #535353);
   }
 }
 </style>
