@@ -1,8 +1,8 @@
 <template>
   <div class="control-wrapper">
     <div @click="showItem" class="menu-btn">
-      <img v-if="isShowItem" src="/resources/close.svg" />
-      <img v-else src="/resources/menu.svg" />
+      <img v-if="isShowItem" src="@/assets/images/close.svg" />
+      <img v-else src="@/assets/images/menu.svg" />
     </div>
     <div class="btn-list" ref="btnList">
       <slot></slot>

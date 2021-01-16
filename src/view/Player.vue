@@ -23,26 +23,26 @@
     </div>
     <Control>
       <div @click="stopPlay">
-        <img src="/resources/stop.svg" />
+        <img src="@/assets/images/stop.svg" />
       </div>
       <div @click="randomPlay">
-        <img src="/resources/choose.svg" />
+        <img src="@/assets/images/choose.svg" />
       </div>
       <div @click="changeOverlap" :class="{ selected: playSetting.overlap }">
-        <img src="/resources/over.svg" />
+        <img src="@/assets/images/over.svg" />
       </div>
       <div
         @click="changeAutoRandom"
         :class="{ selected: playSetting.autoRandom }"
       >
-        <img src="/resources/auto.svg" />
+        <img src="@/assets/images/auto.svg" />
       </div>
     </Control>
   </div>
 </template>
 
 <script>
-import VoiceList from '../voices.json'
+import VoiceList from '@/../setting/voices.json'
 import Card from '../components/common/Card'
 import Button from '../components/common/Button'
 import Control from '../components/Control'

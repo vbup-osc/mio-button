@@ -3,7 +3,7 @@
     <div class="title">
       {{ $t("info.title") }}
     </div>
-    <img src="/resources/bg.png" />
+    <img src="@/../setting/bg.png" />
   </div>
 </template>
 

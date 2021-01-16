@@ -2,25 +2,25 @@
   <div id="app">
     <Select ref="Select" class="select">
       <template #icon>
-        <img src="resources/lang.svg" />
+        <img src="@/assets/images/lang.svg" />
       </template>
       <div>
         <img
-          src="resources/China.jpg"
+          src="@/assets/images/China.jpg"
           width="100%"
           @click="changeLang('zh-CN')"
         />
       </div>
       <div>
         <img
-          src="resources/Japan.png"
+          src="@/assets/images/Japan.jpg"
           width="100%"
           @click="changeLang('ja-JP')"
         />
       </div>
       <div>
         <img
-          src="resources/England.jpg"
+          src="@/assets/images/England.jpg"
           width="100%"
           @click="changeLang('en-US')"
         />

@@ -23,7 +23,7 @@
 <script>
 import Card from '@/components/common/Card'
 import Button from '@/components/common/Button'
-import Voices from '@/voices.json'
+import Voices from '@/../setting/voices.json'
 
 export default {
   components: {

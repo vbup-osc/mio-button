@@ -1,11 +1,10 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 
-import zh_CN from '@/locales/zh-CN'
-import ja_JP from '@/locales/ja-JP'
-import en_US from '@/locales/en-US'
-import VoiceList from '@/voices.json'
-
+import zh_CN from '@/../setting/locales/zh-CN'
+import ja_JP from '@/../setting/locales/ja-JP'
+import en_US from '@/../setting/locales/en-US'
+import VoiceList from '@/../setting/voices.json'
 import Setting from '@/../setting/setting.json'
 
 Vue.use(VueI18n)

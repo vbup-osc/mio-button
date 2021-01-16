@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Voives from '@/voices.json'
+import Voives from '@/../setting/voices.json'
 import Card from '@/components/common/Card'
 import Button from '@/components/common/Button'
 
