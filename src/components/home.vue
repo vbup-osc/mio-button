@@ -12,54 +12,6 @@
         <audio id="player" @ended="voiceEnd(false)"></audio>
       </div>
       <div class="cate-ctrldft">
-        {{ $t("action.random") }}
-        <input
-          id="share"
-          class="btn btn-ctrldft"
-          style="width: 190px; -webkit-user-select: text !important"
-          type="text"
-          name="u"
-          value
-          :placeholder="$t('action.placeholder')"
-        />
-        <button class="btn btn-ctrldft" @click="randomshare">
-          {{ $t("action.share") }}
-        </button>
-      </div>
-      <div class="cate-ctrldft">
-        {{ $t("action.adtitle") }}
-        <button
-          class="btn btn-ctrldft"
-          onclick="window.open('https://www.bilibili.com/read/readlist/rl210208')"
-        >
-          {{ $t("action.weekly") }}
-        </button>
-        <button
-          class="btn btn-ctrldft"
-          onclick="window.open('https://vtbbtn.org')"
-        >
-          {{ $t("action.vtbbtn") }}
-        </button>
-        <button
-          class="btn btn-ctrldft"
-          onclick="window.open('https://cute.ookamimio.org')"
-        >
-          {{ $t("action.sticker") }}
-        </button>
-        <button
-          class="btn btn-ctrldft"
-          onclick="window.open('https://ookamimio.org/resources/voice.rar')"
-        >
-          {{ $t("action.voicepack") }}
-        </button>
-        <button
-          class="btn btn-ctrldft"
-          onclick="window.open('https://ookamimio.org/resources/fubumio.png')"
-        >
-          {{ $t("action.AvatarFrame") }}
-        </button>
-      </div>
-      <div class="cate-ctrldft">
         <a @click="cate()" style="text-decoration: none; color: #fff"
           ><img
             id="imgcate"
