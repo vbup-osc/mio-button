@@ -28,6 +28,8 @@
     </Select>
     <Header />
     <Live />
+    <Collaborate />
+    <Category />
     <Player />
     <div class="container-fluid main-content">
       <router-view></router-view>
@@ -41,6 +43,8 @@
 import Select from './components/Select'
 import Header from './view/Header'
 import Live from './view/Live'
+import Collaborate from './view/Collaborate'
+import Category from './view/Category'
 import Player from './view/Player'
 import Footer from './view/Footer'
 
@@ -48,6 +52,8 @@ export default {
   components: {
     Select,
     Live,
+    Collaborate,
+    Category,
     Player,
     Header,
     Footer
@@ -70,7 +76,7 @@ export default {
 body {
   background: rgb(78, 78, 78);
   margin: 0;
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 a {

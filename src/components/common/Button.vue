@@ -1,6 +1,6 @@
 <template>
   <div class="btn-wrapper" :class="voice ? 'voice-btn' : 'btn'">
-    <a v-if="url" :href="url" target="_blank">{{ value }}</a>
+    <a v-if="url" :href="url" :target="blank ? '_blank' : ''">{{ value }}</a>
     <template v-else>
       {{ value }}
     </template>
@@ -21,6 +21,10 @@ export default {
     url: {
       type: String,
       default: null
+    },
+    blank: {
+      type: Boolean,
+      default: true
     }
   }
 }
@@ -28,7 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 a {
-  color: #fff
+  color: #fff;
 }
 
 .btn-wrapper {

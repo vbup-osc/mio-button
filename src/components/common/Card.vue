@@ -3,7 +3,7 @@
     <div class="card-header" v-if="$slots.header">
       <slot name="header"></slot>
     </div>
-    <div class="card-text">
+    <div>
       <slot></slot>
     </div>
   </div>
@@ -34,10 +34,7 @@ export default {
   .card-header {
     font-size: 20px;
     font-weight: 600;
-  }
-
-  .card-text {
-    padding: 5px 0;
+    margin: 5px 0;
   }
 }
 

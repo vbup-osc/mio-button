@@ -3,20 +3,18 @@
     <div v-if="playSetting.nowPlay.name" class="status">
       {{ $t("action.playing") + $t("voice." + playSetting.nowPlay.name) }}
     </div>
-    <div v-for="category in voices" :key="category.categoryName">
+    <div v-for="category in voices" :key="category.categoryName" :id="category.categoryName">
       <Card class="category" :dark="true">
         <template #header>
           {{ $t("voicecategory." + category.categoryName) }}
         </template>
-        <div class="btn-list">
-          <Button
-            v-for="voiceItem in category.voiceList"
-            :voice="true"
-            :key="voiceItem.name"
-            :value="$t('voice.' + voiceItem.name)"
-            @click.native="play(voiceItem)"
-          />
-        </div>
+        <Button
+          v-for="voiceItem in category.voiceList"
+          :voice="true"
+          :key="voiceItem.name"
+          :value="$t('voice.' + voiceItem.name)"
+          @click.native="play(voiceItem)"
+        />
       </Card>
     </div>
     <Control>
