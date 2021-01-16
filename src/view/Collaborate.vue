@@ -8,6 +8,26 @@
         :value="item.title"
         :url="item.url"
       />
+      <Button
+        :value="$t('action.weekly')"
+        url="https://www.bilibili.com/read/readlist/rl210208"
+      />
+      <Button
+        :value="$t('action.vtbbtn')"
+        url="https://vtbbtn.org"
+      />
+      <Button
+        :value="$t('action.sticker')"
+        url="https://ookamimio.org/resources/voice.rar"
+      />
+      <Button
+        :value="$t('action.voicepack')"
+        url="'https://ookamimio.org/resources/voice.rar"
+      />
+      <Button
+        :value="$t('action.AvatarFrame')"
+        url="https://ookamimio.org/resources/fubumio.png"
+      />
     </template>
   </Card>
 </template>
@@ -23,28 +43,7 @@ export default {
   },
   data() {
     return {
-      list: [
-        {
-          title: this.$t('action.weekly'),
-          url: 'https://www.bilibili.com/read/readlist/rl210208'
-        },
-        {
-          title: this.$t('action.vtbbtn'),
-          url: 'https://vtbbtn.org'
-        },
-        {
-          title: this.$t('action.voicepack'),
-          url: 'https://www.bilibili.com/read/readlist/rl210208'
-        },
-        {
-          title: this.$t('action.sticker'),
-          url: 'https://ookamimio.org/resources/voice.rar'
-        },
-        {
-          title: this.$t('action.AvatarFrame'),
-          url: 'https://ookamimio.org/resources/fubumio.png'
-        }
-      ]
+      list: []
     }
   }
 }
