@@ -11,60 +11,6 @@
         </div>
         <audio id="player" @ended="voiceEnd(false)"></audio>
       </div>
-      <button
-        @click="control"
-        class="btn btn-control-main"
-        style="right: 15px; bottom: 15px"
-      >
-        <img
-          id="img"
-          src="/resources/menu.svg"
-          style="margin: 0px 9px; width: 30px"
-        />
-      </button>
-      <div id="btn" style="display: none">
-        <button
-          id="small"
-          class="btn btn-control"
-          style="right: 78px; bottom: 15px"
-          @click="stopPlay"
-        >
-          <img src="/resources/stop.svg" style="width: 30px" />
-        </button>
-        <button
-          id="small"
-          class="btn btn-control"
-          style="right: 123px; bottom: 15px"
-          @click="random"
-        >
-          <img src="/resources/choose.svg" style="width: 30px" />
-        </button>
-        <button
-          id="small"
-          class="btn btn-control"
-          style="right: 168px; bottom: 15px; padding: 5.5px"
-          :class="{ disabled: autoCheck }"
-          @click="overlap"
-          :title="$t('info.overlapTips')"
-        >
-          <input class="checkbox" type="checkbox" v-model="overlapCheck" /><img
-            src="/resources/over.svg"
-            style="width: 25px"
-          />
-        </button>
-        <button
-          id="small"
-          class="btn btn-control"
-          style="right: 226px; bottom: 15px"
-          :class="{ disabled: overlapCheck }"
-          @click="autoPlay"
-        >
-          <input class="checkbox" type="checkbox" v-model="autoCheck" /><img
-            src="/resources/auto.svg"
-            style="width: 30px"
-          />
-        </button>
-      </div>
       <div class="cate-ctrldft">
         {{ $t("action.random") }}
         <input
@@ -134,21 +80,6 @@
               >{{ $t("voicecategory." + category.categoryName) }}</a
             >
           </button>
-        </div>
-      </div>
-      <div v-for="category in voices" v-bind:key="category.categoryName">
-        <div class="cate-header" :id="category.categoryName">
-          {{ $t("voicecategory." + category.categoryName) }}
-          <div class="cate-body">
-            <button
-              class="btn btn-new"
-              v-for="voiceItem in category.voiceList"
-              v-bind:key="voiceItem.name"
-              @click="play(voiceItem)"
-            >
-              {{ $t("voice." + voiceItem.name) }}
-            </button>
-          </div>
         </div>
       </div>
     </div>
