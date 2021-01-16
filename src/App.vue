@@ -28,6 +28,7 @@
     </Select>
     <Header />
     <Live />
+    <Share />
     <Collaborate />
     <Category />
     <Player />
@@ -43,6 +44,7 @@
 import Select from './components/Select'
 import Header from './view/Header'
 import Live from './view/Live'
+import Share from './view/Share'
 import Collaborate from './view/Collaborate'
 import Category from './view/Category'
 import Player from './view/Player'
@@ -52,6 +54,7 @@ export default {
   components: {
     Select,
     Live,
+    Share,
     Collaborate,
     Category,
     Player,
