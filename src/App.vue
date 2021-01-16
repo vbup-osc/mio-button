@@ -32,9 +32,6 @@
     <Collaborate />
     <Category />
     <Player />
-    <div class="container-fluid main-content">
-      <router-view></router-view>
-    </div>
     <Footer />
   </div>
 </template>
