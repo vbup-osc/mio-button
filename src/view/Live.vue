@@ -77,6 +77,7 @@ export default {
 .live-wrapper {
   .live {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     .live-time {
       font-size: 17px;

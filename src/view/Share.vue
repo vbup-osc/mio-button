@@ -53,6 +53,7 @@ export default {
 <style lang="scss" scoped>
 .share {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   .input {
     width: 190px;
