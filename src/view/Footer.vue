@@ -5,8 +5,8 @@
         <div>©2020</div>
         <template v-for="(item, index) in author">
           <div :key="index">
-            <a v-if="index > 0">&</a>
-            <a :href="item.url || null" target="_blank">{{ item.name }}</a>
+            <a style="margin-left: 5px" v-if="index > 0">&</a>
+            <a style="margin-left: 5px" :href="item.url || null" target="_blank">{{ item.name }}</a>
           </div>
         </template>
       </div>
@@ -15,6 +15,7 @@
         <template v-for="(item, index) in info">
           <div :key="index" v-html="item"></div>
         </template>
+        <a style="margin-left: 0" v-if="github" :href="github">{{ $t("info.toGithub") }}</a>
       </div>
     </div>
   </div>
@@ -29,7 +30,8 @@ export default {
   data() {
     return {
       author: FOOTER.author || [],
-      info: FOOTER.info || []
+      info: FOOTER.info || [],
+      github: FOOTER.github || ''
     }
   }
 }
@@ -40,10 +42,6 @@ export default {
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
-}
-
-a {
-  margin-left: 5px;
 }
 
 .footer {

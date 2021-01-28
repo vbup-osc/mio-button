@@ -3,12 +3,6 @@
     <template #header>
       {{ $t("action.adtitle") }}
       <Button
-        v-for="(item, index) in list"
-        :key="index"
-        :value="item.title"
-        :url="item.url"
-      />
-      <Button
         :value="$t('action.weekly')"
         url="https://www.bilibili.com/read/readlist/rl210208"
       />
@@ -27,6 +21,12 @@
       <Button
         :value="$t('action.AvatarFrame')"
         url="https://ookamimio.org/resources/fubumio.png"
+      />
+      <Button
+        v-for="(item, index) in list"
+        :key="index"
+        :value="item.title"
+        :url="item.url"
       />
     </template>
   </Card>
