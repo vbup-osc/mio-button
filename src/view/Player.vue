@@ -109,6 +109,7 @@ export default {
       }
       this.playerList.get(key).audio.oncanplay = () => {
         this.playerList.get(key).audio.onended = () => {
+          this.playSetting.nowPlay = {}
           this.playerList.delete(key)
           if (this.playSetting.autoRandom) {
             this.randomPlay()
