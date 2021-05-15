@@ -24,10 +24,6 @@ This project was greatly helped by [Lonely_ion](https://github.com/lonelyion) , 
 
 This project is modified based on the [Aqua button](https://github.com/zyzsdy/aqua-button).
 
-[![Vercel Logo](https://cdn.jsdelivr.net/gh/paizi/vue-test/vercel.svg)](https://www.vercel.com/?utm_source=vbuposc&utm_campaign=oss)
-
-本项目由 [Vercel](https://www.vercel.com/?utm_source=vbuposc&utm_campaign=oss) 强力驱动。
-
 ## LICENSE
 
 > 注：若以下内容存在与GPL协议内容冲突或GPL协议内容未提及的，请按以下内容为准。
