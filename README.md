@@ -2,7 +2,7 @@
 
 Mio Button [http://ookamimio.org](https://ookamimio.org)
 
-![MIO-BTN-CI/CD](https://github.com/MioButton/MioButton/workflows/MIO-BTN-CI/CD/badge.svg)
+![MIO-BTN-CI/CD](https://github.com/vbup-osc/mio-button/workflows/MIO-BTN-CI/CD/badge.svg)
 
 相关链接/関連URL/Related Links:
 
