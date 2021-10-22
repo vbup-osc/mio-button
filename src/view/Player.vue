@@ -80,9 +80,7 @@ export default {
         })
       }
       if (!this.playSetting.overlap) {
-        if (this.playerList.has('once')) {
-          this.playerList.get('once').audio.pause()
-        }
+        this.stopPlay()
         this.addPlayer(voice, 'once')
       } else {
         const key = new Date().getTime()
