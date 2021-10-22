@@ -81,6 +81,18 @@ export default {
       &:hover {
         background-color: $control-hover-color;
       }
+      .btn-tip {
+        position: absolute;
+        background: #ff7c7c;
+        font-size: 12px;
+        display: inline-block;
+        white-space: nowrap;
+        color: #fff;
+        top: -36px;
+        border-radius: 4px;
+        padding: 2px;
+      }
+      font-weight: 200;
     }
   }
 }

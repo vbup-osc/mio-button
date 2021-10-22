@@ -22,19 +22,30 @@
       </Card>
     </div>
     <Control>
-      <div @click="stopPlay">
+      <div @click="stopPlay" @mouseover="showControlTip($t('action.stopvoice'), 1)" @mouseleave="closeTip">
+        <p v-if="this.tip.pos === 1" class="btn-tip">{{ this.tip.text }}</p>
         <img src="@/assets/images/stop.svg" />
       </div>
-      <div @click="randomPlay">
+      <div @click="randomPlay" @mouseover="showControlTip($t('action.randomplay'), 2)" @mouseleave="closeTip">
+        <p v-if="this.tip.pos === 2" class="btn-tip">{{ this.tip.text }}</p>
         <img src="@/assets/images/choose.svg" />
       </div>
-      <div @click="changeOverlap" :class="{ selected: playSetting.overlap }">
+      <div
+        @click="changeOverlap"
+        :class="{ selected: playSetting.overlap }"
+        @mouseover="showControlTip($t('action.overlap'), 3)"
+        @mouseleave="closeTip"
+      >
+        <p v-if="this.tip.pos === 3" class="btn-tip">{{ `${this.tip.text}: ${this.playSetting.overlap ? '开' : '关'}` }}</p>
         <img src="@/assets/images/over.svg" />
       </div>
       <div
         @click="changeAutoRandom"
         :class="{ selected: playSetting.autoRandom }"
+        @mouseover="showControlTip($t('action.autoplay'), 4)"
+        @mouseleave="closeTip"
       >
+        <p v-if="this.tip.pos === 4" class="btn-tip">{{ `${this.tip.text}: ${this.playSetting.autoRandom ? '开' : '关'}` }}</p>
         <img src="@/assets/images/auto.svg" />
       </div>
     </Control>
@@ -66,7 +77,11 @@ export default {
         autoRandom: false
       },
       playerList: new Map(),
-      voices: VoiceList.voices
+      voices: VoiceList.voices,
+      tip: {
+        pos: 0,
+        text: ''
+      }
     }
   },
   methods: {
@@ -139,6 +154,18 @@ export default {
     },
     _getrRandomInt(max) {
       return Math.floor(Math.random() * Math.floor(max))
+    },
+    showControlTip(text, pos) {
+      this.tip = {
+        pos,
+        text
+      }
+    },
+    closeTip() {
+      this.tip = {
+        pos: 0,
+        text: ''
+      }
     }
   }
 }
